@@ -2,12 +2,12 @@
   <div class="portfolio-view">
     <h1>This is a Portfolio Page</h1>
     <p>I'm currently learning JavaScript and Vue 3.</p>
-    <ButtonComp />
+    <ButtonComp>Click Me</ButtonComp>
   </div>
 </template>
 
 <script>
-import ButtonComp from "./components/ui-library/ButtonComp.vue";
+import ButtonComp from "../../src/components/ui-library/ButtonComp.vue";
 
 export default {
   components: {
