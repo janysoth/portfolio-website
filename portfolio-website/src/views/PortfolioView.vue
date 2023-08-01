@@ -6,12 +6,6 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import ButtonComp from "../../src/components/ui-library/ButtonComp.vue";
-
-export default {
-  components: {
-    ButtonComp,
-  },
-};
 </script>
