@@ -2,13 +2,35 @@
   <div>
     <button
       class="px-6 py-2 font-semibold text-white bg-blue-500 rounded-md hover:opacity-95 focus:outline-none mt-2 mb-2"
-      @click="displayMessage"
+      @click="onButtonClick"
     >
-      <slot>Submit</slot>
+      {{ buttonText }}
     </button>
     <p>{{ message }}</p>
   </div>
 </template>
+
+<script>
+export default {
+  name: "ButtonComp",
+  props: {
+    type: {
+      type: String,
+      default: "Submit",
+    },
+    buttonText: {
+      type: String,
+      default: "Click Me",
+      required: true,
+    },
+  },
+  methods: {
+    onButtonClick() {
+      this.$emit("button-clicked");
+    },
+  },
+};
+</script>
 
 <!-- <script>
 export default {
@@ -26,7 +48,7 @@ export default {
 };
 </script> -->
 
-<script setup>
+<!-- <script setup>
 import { ref } from "vue";
 
 // Define a ref to track the message state
@@ -36,4 +58,4 @@ const message = ref("");
 const displayMessage = () => {
   message.value = "Button clicked!";
 };
-</script>
+</script> -->
