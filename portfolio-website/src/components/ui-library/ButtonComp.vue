@@ -20,7 +20,6 @@ export default {
     },
     buttonText: {
       type: String,
-      default: "Click Me",
       required: true,
     },
   },
