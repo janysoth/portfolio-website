@@ -2,11 +2,19 @@
   <div class="portfolio-view">
     <h1>This is a Portfolio Page</h1>
     <p>I'm currently learning JavaScript and Vue 3.</p>
-    <ButtonComp
-      v-if="!message"
-      button-text="Click Me"
-      @button-clicked="handleButtonClick"
-    />
+    <div class="flex items-center mt-4 justify-center">
+      <input
+        v-if="!message"
+        v-model="inputValue"
+        class="border border-gray-300 px-2 py-2 rounded-md mr-2 w-64"
+        placeholder="Enter Your Name Here..."
+      />
+      <ButtonComp
+        v-if="!message"
+        button-text="Submit"
+        @button-clicked="handleButtonClick"
+      />
+    </div>
     <p>{{ message }}</p>
     <ButtonComp
       button-text="Clear Message"
@@ -33,16 +41,18 @@ export default {
   data() {
     return {
       message: "",
+      inputValue: "",
     };
   },
   methods: {
     handleButtonClick() {
       // Update the message when the button is clicked
-      this.message = "You have clicked a button!";
+      this.message = `Hi, ${this.inputValue}. Hope you have a good day!`;
     },
 
     removeMessage() {
       this.message = ""; // Clear the message
+      this.inputValue = "";
     },
   },
 };
