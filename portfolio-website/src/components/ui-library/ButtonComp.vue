@@ -6,7 +6,6 @@
     >
       {{ buttonText }}
     </button>
-    <p>{{ message }}</p>
   </div>
 </template>
 
@@ -14,10 +13,6 @@
 export default {
   name: "ButtonComp",
   props: {
-    type: {
-      type: String,
-      default: "Submit",
-    },
     buttonText: {
       type: String,
       required: true,
