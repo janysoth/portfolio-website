@@ -20,6 +20,7 @@
       button-text="Clear Message"
       v-if="message"
       @button-clicked="removeMessage"
+      color="red"
     />
     <!-- <button
       v-if="message"
@@ -42,12 +43,15 @@ export default {
     return {
       message: "",
       inputValue: "",
+      color: "",
     };
   },
   methods: {
     handleButtonClick() {
-      // Update the message when the button is clicked
-      this.message = `Hi, ${this.inputValue}. Hope you have a good day!`;
+      if (this.inputValue)
+        // Update the message when the button is clicked
+        this.message = `Hi, ${this.inputValue}. Hope you have a good day!`;
+      else this.message = "Please Enter Your Name";
     },
 
     removeMessage() {
