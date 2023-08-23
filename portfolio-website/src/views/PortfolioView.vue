@@ -14,8 +14,13 @@
         <h2 class="text-xl">Jonny Vorn Soth</h2>
       </template>
       <template #body>
-        <p>This is the card body content.</p>
-        <p>It can include multiple paragraphs or other elements.</p>
+        <div class="text-center flex flex-col items-center"> <!-- Center the content within the card's body -->
+          <p>Here's Cambodia Flag</p>
+          <img src="@/assets/cambodia-flag.png">
+          <video controls autoplay loop class="mt-4">
+            <source src="@/assets/cambodia-flag-animation.mp4" type="video/mp4">
+          </video>
+        </div>
       </template>
       <template #footer>
         <p>Card Footer with additional information.</p>
