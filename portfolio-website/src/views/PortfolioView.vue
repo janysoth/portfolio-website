@@ -10,7 +10,7 @@
     <p>{{ message }}</p>
     <ButtonComp button-text="Clear Message" v-if="message" @button-clicked="removeMessage" color="red" />
     <CardComp>
-      <p>My first paragraph here...</p>
+      <p>The Card Component will go here...</p>
     </CardComp>
   </div>
 </template>
