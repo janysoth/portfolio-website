@@ -18,7 +18,7 @@ export default {
     },
     color: {
       type: String,
-      default: "blue",
+      required: true,
     },
   },
   methods: {

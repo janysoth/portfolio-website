@@ -5,7 +5,7 @@
     <div class="flex items-center mt-4 justify-center">
       <input v-if="!message" v-model="inputValue" class="border border-gray-300 px-2 py-2 rounded-md mr-2 w-64"
         placeholder="Enter Your Name Here..." />
-      <ButtonComp v-if="!message" button-text="Submit" @button-clicked="handleButtonClick" />
+      <ButtonComp v-if="!message" button-text="Submit" @button-clicked="handleButtonClick" color="blue" />
     </div>
     <p>{{ message }}</p>
     <ButtonComp button-text="Clear Message" v-if="message" @button-clicked="removeMessage" color="red" />
