@@ -1,14 +1,28 @@
-/* eslint-disable */
 <template>
-  <div>
-    <slot>This is Card Component using Vue 3.</slot>
+  <div class="border border-red-500 rounded-lg shadow-md max-w-xs mx-auto">
+    <div class="bg-gray-100 py-2 px-4 rounded-t-lg">
+      <slot name="header">Header</slot>
+    </div>
+    <div class="p-4">
+      <slot name="body">Body</slot>
+    </div>
+    <div class="card-footer bg-gray-100 py-2 px-4 rounded-b-lg">
+      <slot name="footer">Footer</slot>
+    </div>
   </div>
 </template>
 
 <script>
-/* eslint-disable */
-/* prettier-ignore */
 export default {
   name: "CardComp",
 };
 </script>
+
+<style scoped>
+.card-wrapper {
+  /* Adjust the desired width */
+  max-width: 300px;
+  /* Center the card horizontally */
+  margin: 0 auto;
+}
+</style>

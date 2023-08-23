@@ -9,8 +9,18 @@
     </div>
     <p>{{ message }}</p>
     <ButtonComp button-text="Clear Message" v-if="message" @button-clicked="removeMessage" color="red" />
-    <CardComp>
-      <p>The Card Component will go here...</p>
+    <CardComp class="mt-2">
+      <template #header>
+        <h2 class="text-xl">Jonny Vorn Soth</h2>
+      </template>
+      <template #body>
+        <p>This is the card body content.</p>
+        <p>It can include multiple paragraphs or other elements.</p>
+      </template>
+      <template #footer>
+        <p>Card Footer with additional information.</p>
+        <a href="#" class="text-blue-500 hover:underline">Read more</a>
+      </template>
     </CardComp>
   </div>
 </template>
