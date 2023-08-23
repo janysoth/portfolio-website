@@ -3,42 +3,28 @@
     <h1>This is a Portfolio Page</h1>
     <p>I'm currently learning JavaScript and Vue 3.</p>
     <div class="flex items-center mt-4 justify-center">
-      <input
-        v-if="!message"
-        v-model="inputValue"
-        class="border border-gray-300 px-2 py-2 rounded-md mr-2 w-64"
-        placeholder="Enter Your Name Here..."
-      />
-      <ButtonComp
-        v-if="!message"
-        button-text="Submit"
-        @button-clicked="handleButtonClick"
-      />
+      <input v-if="!message" v-model="inputValue" class="border border-gray-300 px-2 py-2 rounded-md mr-2 w-64"
+        placeholder="Enter Your Name Here..." />
+      <ButtonComp v-if="!message" button-text="Submit" @button-clicked="handleButtonClick" />
     </div>
     <p>{{ message }}</p>
-    <ButtonComp
-      button-text="Clear Message"
-      v-if="message"
-      @button-clicked="removeMessage"
-      color="red"
-    />
-    <!-- <button
-      v-if="message"
-      class="px-4 py-2 font-semibold text-white bg-red-500 rounded-md hover:opacity-95 focus:outline-none mt-2"
-      @click="removeMessage"
-    >
-      Clear Message
-    </button> -->
+    <ButtonComp button-text="Clear Message" v-if="message" @button-clicked="removeMessage" color="red" />
+    <CardComp>
+      <p>My first paragraph here...</p>
+    </CardComp>
   </div>
 </template>
 
 <script>
+import CardComp from "@/components/ui-library/CardComp.vue";
 import ButtonComp from "../../src/components/ui-library/ButtonComp.vue";
 
 export default {
   components: {
     ButtonComp,
+    CardComp,
   },
+
   data() {
     return {
       message: "",
@@ -46,6 +32,7 @@ export default {
       color: "",
     };
   },
+
   methods: {
     handleButtonClick() {
       if (this.inputValue)
@@ -53,7 +40,6 @@ export default {
         this.message = `Hi, ${this.inputValue}. Hope you have a good day!`;
       else this.message = "Please Enter Your Name";
     },
-
     removeMessage() {
       this.message = ""; // Clear the message
       this.inputValue = "";

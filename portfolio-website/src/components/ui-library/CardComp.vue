@@ -1,7 +1,12 @@
+/* eslint-disable */
 <template>
-  <div></div>
+  <div>
+    <slot>This is Card Component using Vue 3.</slot>
+  </div>
 </template>
 
-<script setup></script>
-
-<style lang="scss" scoped></style>
+<script>
+export default {
+  name: "CardComp",
+};
+</script>
