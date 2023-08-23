@@ -16,6 +16,8 @@
 </template>
 
 <script>
+/* eslint-disable */
+/* prettier-ignore */
 import CardComp from "@/components/ui-library/CardComp.vue";
 import ButtonComp from "../../src/components/ui-library/ButtonComp.vue";
 

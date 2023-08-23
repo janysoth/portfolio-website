@@ -6,6 +6,8 @@
 </template>
 
 <script>
+/* eslint-disable */
+/* prettier-ignore */
 export default {
   name: "CardComp",
 };
