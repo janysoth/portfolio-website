@@ -28,31 +28,3 @@ export default {
   },
 };
 </script>
-
-<!-- <script>
-export default {
-  name: "ButtonComp",
-  props: {
-    type: {
-      type: String,
-      default: "Submit",
-    },
-    buttonText: {
-      type: String,
-      default: "Click Me",
-    },
-  },
-};
-</script> -->
-
-<!-- <script setup>
-import { ref } from "vue";
-
-// Define a ref to track the message state
-const message = ref("");
-
-// Function to display the message
-const displayMessage = () => {
-  message.value = "Button clicked!";
-};
-</script> -->
