@@ -1,3 +1,4 @@
+<!-- eslint-disable prettier/prettier -->
 <template>
   <div class="portfolio-view">
     <h1>This is a Portfolio Page</h1>
@@ -5,10 +6,10 @@
     <div class="flex items-center mt-4 justify-center">
       <input v-if="!message" v-model="inputValue" class="border border-gray-300 px-2 py-2 rounded-md mr-2 w-64"
         placeholder="Enter Your Name Here..." />
-      <ButtonComp v-if="!message" button-text="Submit" @button-clicked="handleButtonClick" color="blue" />
+      <ButtonComp v-if="!message" button-text="Submit" @button-clicked="handleButtonClick" color="primary" />
     </div>
     <p>{{ message }}</p>
-    <ButtonComp button-text="Clear Message" v-if="message" @button-clicked="removeMessage" color="red" />
+    <ButtonComp button-text="Clear Message" v-if="message" @button-clicked="removeMessage" color="secondary" />
     <CardComp class="mt-2">
       <template #header>
         <h2 class="text-xl">Jonny Vorn Soth</h2>
@@ -16,7 +17,6 @@
       <template #body>
         <div class="text-center flex flex-col items-center"> <!-- Center the content within the card's body -->
           <p>Here's Cambodia Flag</p>
-          <img src="@/assets/cambodia-flag.png">
           <video controls autoplay loop class="mt-4">
             <source src="@/assets/cambodia-flag-animation.mp4" type="video/mp4">
           </video>
