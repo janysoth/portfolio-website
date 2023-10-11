@@ -43,24 +43,17 @@ export default {
   font-weight: bold;
   padding: 0.5rem 1rem;
   border-radius: 100px;
-  transition: background-color 0.3s;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .primary {
   background-color: #4299e1;
-
-  &:hover {
-    background-color: #1a365d;
-    /* Darker blue on hover */
-  }
 }
 
 .secondary {
   background-color: #f50911;
-
-  &:hover {
-    background-color: #f25b65;
-    /* Change to the desired shade of blue for hover */
-  }
 }
 </style>
