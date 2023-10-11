@@ -6,10 +6,10 @@
     <div class="flex items-center mt-4 justify-center">
       <input v-if="!message" v-model="inputValue" class="border border-gray-300 px-2 py-2 rounded-md mr-2 w-64"
         placeholder="Enter Your Name Here..." />
-      <ButtonComp v-if="!message" button-text="Submit" @button-clicked="handleButtonClick" color="primary" />
+      <ButtonComp v-if="!message" button-text="Submit" @button-clicked="handleButtonClick" buttonType="primary" />
     </div>
     <p>{{ message }}</p>
-    <ButtonComp button-text="Clear Message" v-if="message" @button-clicked="removeMessage" color="secondary" />
+    <ButtonComp button-text="Clear Message" v-if="message" @button-clicked="removeMessage" buttonType="secondary" />
     <CardComp class="mt-2">
       <template #header>
         <h2 class="text-xl">Jonny Vorn Soth</h2>

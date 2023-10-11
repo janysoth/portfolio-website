@@ -1,8 +1,7 @@
 <!-- eslint-disable prettier/prettier -->
 <template>
   <div>
-    <button class="px-4 py-2 font-semibold text-white rounded-md hover:opacity-95 focus:outline-none mt-2 mb-2"
-      :class="buttonColors" @click="onButtonClick">
+    <button class="button" :class="buttonType" @click="onButtonClick">
       {{ buttonText }}
     </button>
   </div>
@@ -16,13 +15,13 @@ export default {
       type: String,
       required: true,
     },
-    color: {
+    buttonType: {
       type: String,
       required: true,
     },
   },
   computed: {
-    buttonColors() {
+    buttonTypes() {
       // Dynamically compute the button's background color based on the 'color' prop
       return {
         "bg-blue-500": this.color === "primary",
@@ -37,3 +36,31 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.button {
+  color: #fff;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  transition: background-color 0.3s;
+}
+
+.primary {
+  background-color: #4299e1;
+
+  &:hover {
+    background-color: #1a365d;
+    /* Darker blue on hover */
+  }
+}
+
+.secondary {
+  background-color: #f50911;
+
+  &:hover {
+    background-color: #f25b65;
+    /* Change to the desired shade of blue for hover */
+  }
+}
+</style>
